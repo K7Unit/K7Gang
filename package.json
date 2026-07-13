@@ -1,5 +1,7 @@
 {
   "scripts": {
-    "test": "node tests/analyzer-state-aware.test.cjs && node tests/analyzer-csv-robustness.test.cjs && node tests/i18n.test.cjs && node tests/analyzer-i18n.test.cjs && node tests/analyzer-fixtures.test.cjs"
+    "lint": "node --check analyzer.js && node --check app.js && node --check i18n.js",
+    "test": "node tests/analyzer-state-aware.test.cjs && node tests/analyzer-csv-robustness.test.cjs && node tests/i18n.test.cjs && node tests/analyzer-i18n.test.cjs && node tests/analyzer-fixtures.test.cjs",
+    "build": "npm run lint && npm test"
   }
 }
